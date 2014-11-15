@@ -19,11 +19,12 @@ import android.widget.RelativeLayout;
 
 import com.qualcomm.vuforia.samples.VuforiaSamples.R;
 
+/* This activity is just a logo image */
 
 public class ActivitySplashScreen extends Activity
 {
     
-    private static long SPLASH_MILLIS = 450;
+    private static long SPLASH_MILLIS = 3000;
     
     
     @Override
@@ -50,8 +51,18 @@ public class ActivitySplashScreen extends Activity
             public void run()
             {
                 
-                Intent intent = new Intent(ActivitySplashScreen.this,
+               /* Intent intent = new Intent(ActivitySplashScreen.this,
                     ActivityLauncher.class);
+                startActivity(intent);*/
+            	
+            	  
+                Intent intent = new Intent(ActivitySplashScreen.this, AboutScreen.class);
+                intent.putExtra("ABOUT_TEXT_TITLE", "Image Targets");
+                
+                intent.putExtra("ACTIVITY_TO_LAUNCH",
+                        "app.ImageTargets.ImageTargets");
+                    intent.putExtra("ABOUT_TEXT", "ImageTargets/IT_about.html");
+                
                 startActivity(intent);
                 
             }
