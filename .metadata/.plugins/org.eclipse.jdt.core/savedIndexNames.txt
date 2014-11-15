@@ -1,0 +1,2 @@
+INDEX VERSION 1.127+/Users/simo/git/BuforiaProjet/.metadata/.plugins/org.eclipse.jdt.core
+2592479938.index
