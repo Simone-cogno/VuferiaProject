@@ -161,14 +161,16 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
     
     private void loadTextures()
     {
-        mTextures.add(Texture.loadTextureFromApk("TextureTeapotBrass.png",
+      /*  mTextures.add(Texture.loadTextureFromApk("TextureTeapotBrass.png",
             getAssets()));
         mTextures.add(Texture.loadTextureFromApk("TextureTeapotBlue.png",
             getAssets()));
         mTextures.add(Texture.loadTextureFromApk("TextureTeapotRed.png",
             getAssets()));
         mTextures.add(Texture.loadTextureFromApk("ImageTargets/Buildings.jpeg",
-            getAssets()));
+            getAssets()));*/
+    	mTextures.add(Texture.loadTextureFromApk("moreinfo.png",
+                getAssets()));
     }
     
     
@@ -234,7 +236,7 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
             // OnCheckedChangeListener is called upon changing the checked state
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
             {
-                ((Switch) mFlashOptionView).setChecked(false);
+              //  ((Switch) mFlashOptionView).setChecked(false);
             } else
             {
                 ((CheckBox) mFlashOptionView).setChecked(false);
@@ -676,7 +678,7 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
                     // OnCheckedChangeListener is called upon changing the checked state
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
                     {
-                        ((Switch) mFlashOptionView).setChecked(false);
+                      //  ((Switch) mFlashOptionView).setChecked(false);
                     } else
                     {
                         ((CheckBox) mFlashOptionView).setChecked(false);

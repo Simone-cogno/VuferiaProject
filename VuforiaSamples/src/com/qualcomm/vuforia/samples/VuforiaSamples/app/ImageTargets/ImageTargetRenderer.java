@@ -216,7 +216,7 @@ public class ImageTargetRenderer implements GLSurfaceView.Renderer
                     OBJECT_SCALE_FLOAT);
                 Matrix.scaleM(modelViewMatrix, 0, OBJECT_SCALE_FLOAT,
                     OBJECT_SCALE_FLOAT, OBJECT_SCALE_FLOAT);
-            } else
+            } else 
             {
                 Matrix.rotateM(modelViewMatrix, 0, 90.0f, 1.0f, 0, 0);
                 Matrix.scaleM(modelViewMatrix, 0, kBuildingScale,
@@ -249,6 +249,7 @@ public class ImageTargetRenderer implements GLSurfaceView.Renderer
                 GLES20.glEnableVertexAttribArray(normalHandle);
                 GLES20.glEnableVertexAttribArray(textureCoordHandle);
                 
+                textureIndex = 0;
                 // activate texture 0, bind it, and pass to shader
                 GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
                 GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,
