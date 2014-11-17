@@ -45,9 +45,12 @@ public final class R {
         public static final int icon_camera_pressed=0x7f02000b;
         public static final int icon_plus_normal=0x7f02000c;
         public static final int icon_plus_pressed=0x7f02000d;
-        public static final int logo=0x7f02000e;
-        public static final int new_target_button_background=0x7f02000f;
-        public static final int vuforia_splash=0x7f020010;
+        public static final int icon_ti=0x7f02000e;
+        public static final int logo=0x7f02000f;
+        public static final int new_target_button_background=0x7f020010;
+        public static final int ticino_empty=0x7f020011;
+        public static final int ticino_full=0x7f020012;
+        public static final int vuforia_splash=0x7f020013;
     }
     public static final class id {
         public static final int about_html_text=0x7f080002;
@@ -60,7 +63,6 @@ public final class R {
         public static final int leftMargin=0x7f080008;
         public static final int loading_indicator=0x7f080005;
         public static final int loading_layout=0x7f08000c;
-        public static final int logo_image=0x7f080014;
         public static final int loupe=0x7f080009;
         public static final int loupeLayout=0x7f080007;
         public static final int menu_group_title=0x7f08000f;

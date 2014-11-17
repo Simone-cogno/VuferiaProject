@@ -43,7 +43,7 @@ public class ActivitySplashScreen extends Activity {
 			@Override
 			public void run() {
 				Intent intent = new Intent(ActivitySplashScreen.this, AboutScreen.class);
-				intent.putExtra("ABOUT_TEXT_TITLE", "Image Targets");
+				intent.putExtra("ABOUT_TEXT_TITLE", "Ticino Tourism");
 
 				intent.putExtra("ACTIVITY_TO_LAUNCH", "app.ImageTargets.ImageTargets");
 				intent.putExtra("ABOUT_TEXT", "ImageTargets/IT_about.html");
