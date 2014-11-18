@@ -169,7 +169,7 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
             getAssets()));
         mTextures.add(Texture.loadTextureFromApk("ImageTargets/Buildings.jpeg",
             getAssets()));*/
-    	mTextures.add(Texture.loadTextureFromApk("moreinfo.png",
+    	mTextures.add(Texture.loadTextureFromApk("TextureMoreInfo.png",
                 getAssets()));
     }
     
