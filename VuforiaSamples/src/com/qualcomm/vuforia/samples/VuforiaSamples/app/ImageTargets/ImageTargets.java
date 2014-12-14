@@ -63,6 +63,7 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
     private int mStartDatasetsIndex = 0;
     private int mDatasetsNumber = 0;
     private ArrayList<String> mDatasetStrings = new ArrayList<String>();
+    private ArrayList<String> mDatasetNames = new ArrayList<String>();
     
     // Our OpenGL view:
     private SampleApplicationGLView mGlView;
@@ -102,9 +103,10 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
         vuforiaAppSession = new SampleApplicationSession(this);
         
         startLoadingAnimation();
-        mDatasetStrings.add("Escursioni_Natura.xml");
-       // mDatasetStrings.add("StonesAndChips.xml");
-       // mDatasetStrings.add("Tarmac.xml");
+        mDatasetStrings.add("DreamBook.xml");
+        mDatasetNames.add("Dream Book");
+        mDatasetStrings.add("EscursioniNatura.xml");
+        mDatasetNames.add("Escursioni & Natura");
         
         vuforiaAppSession
             .initAR(this, ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -566,9 +568,9 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
         group = mSampleAppMenu.addGroup("", false);
         group.addTextItem(getString(R.string.menu_back), -1);
         
-        group = mSampleAppMenu.addGroup("", true);
+      /*  group = mSampleAppMenu.addGroup("", true);
         group.addSelectionItem(getString(R.string.menu_extended_tracking),
-            CMD_EXTENDED_TRACKING, false);
+            CMD_EXTENDED_TRACKING, false);*/
         group.addSelectionItem(getString(R.string.menu_contAutofocus),
             CMD_AUTOFOCUS, mContAutofocus);
         mFlashOptionView = group.addSelectionItem(
@@ -600,10 +602,12 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
             .addGroup(getString(R.string.menu_datasets), true);
         mStartDatasetsIndex = CMD_DATASET_START_INDEX;
         mDatasetsNumber = mDatasetStrings.size();
-        
-        group.addRadioItem("Stones & Chips", mStartDatasetsIndex, true);
-        group.addRadioItem("Tarmac", mStartDatasetsIndex + 1, false);
-        
+        // TODO Add groups to datasets
+    	group.addRadioItem(mDatasetNames.get(0), mStartDatasetsIndex, true);
+        for(int i=1;i<mDatasetStrings.size();i++){
+        	group.addRadioItem(mDatasetNames.get(i), mStartDatasetsIndex+1, false);
+        }
+                
         mSampleAppMenu.attachMenu();
     }
     
