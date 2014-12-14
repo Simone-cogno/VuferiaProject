@@ -102,8 +102,9 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
         vuforiaAppSession = new SampleApplicationSession(this);
         
         startLoadingAnimation();
-        mDatasetStrings.add("StonesAndChips.xml");
-        mDatasetStrings.add("Tarmac.xml");
+        mDatasetStrings.add("Escursioni_Natura.xml");
+       // mDatasetStrings.add("StonesAndChips.xml");
+       // mDatasetStrings.add("Tarmac.xml");
         
         vuforiaAppSession
             .initAR(this, ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
